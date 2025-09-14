@@ -1,35 +1,46 @@
 # Decision Tree Implementation 🌳
 
-This project demonstrates the implementation of a **Decision Tree Classifier** using the **Iris dataset**. The focus is on building, training, evaluating, and improving the decision tree model with techniques like **post-pruning** to reduce overfitting and improve generalization.
+This project demonstrates the implementation of a **Decision Tree Classifier** using the **Iris dataset**.  
+The focus is on:
+- Training and visualizing a decision tree  
+- Applying **pre-pruning techniques** to prevent overfitting  
+- Applying **post-pruning (cost-complexity pruning)** to further optimize the model  
 
 ---
 
 ## Project Structure
-- `Decision_Tree_Implementation.ipynb` – Jupyter Notebook containing the full code implementation.  
-- Dataset – Iris dataset is loaded from `sklearn.datasets`.  
+- Dataset – Iris dataset loaded directly from `sklearn.datasets`  
 
----
+
 
 ## Features
 - Load and preprocess the Iris dataset  
-- Split the dataset into training and testing sets  
 - Train a **Decision Tree Classifier**  
-- Visualize the decision tree structure  
-- Evaluate model performance using accuracy score  
-- Apply **Post-Pruning** (cost-complexity pruning) to optimize the tree and avoid overfitting  
+- Visualize the tree structure  
+- Evaluate accuracy on training and test data  
+
+
+## ⚡ Pre-Pruning
+Pre-pruning involves restricting tree growth **while training** to avoid overfitting.  
+Parameters used:
+- `max_depth` → maximum depth of the tree  
+- `criterion` →criteria for calculating the leaf node  
+- `splitter` → the best way to split the tree
+- `max_features` → number of features to be used 
+
+This helps in building a smaller, simpler tree that generalizes better.  
 
 
 
-## Post-Pruning
-Decision trees tend to overfit when they grow too deep.  
-To handle this, **cost-complexity pruning (`ccp_alpha`)** was applied:  
-- Higher `ccp_alpha` → more pruning (simpler tree)  
-- Lower `ccp_alpha` → less pruning (more complex tree)  
-- Optimal value chosen using cross-validation  
+## 📊 Post-Pruning
+Post-pruning (also known as **cost-complexity pruning**) is applied **after training** the full tree.  
+
+
+## This helps in reducing overfitting and improves model performance on unseen data. 
 
 
 
-##  Technologies Used
+## Technologies Used
 - Python 3  
 - Scikit-learn  
 - Pandas  
@@ -38,10 +49,10 @@ To handle this, **cost-complexity pruning (`ccp_alpha`)** was applied:
 
 
 
-##  Results
-- Implemented a baseline Decision Tree Classifier  
-- Improved generalization and reduced overfitting using **post-pruning**  
-- Achieved good accuracy on test data  
-
+## Results
+- Implemented baseline Decision Tree Classifier  
+- Applied **pre-pruning hyperparameters** to control depth and splits  
+- Applied **post-pruning** to simplify the tree  
+- Achieved good accuracy while reducing overfitting  
 
 
