@@ -20,7 +20,7 @@ The focus is on:
 - Evaluate accuracy on training and test data  
 
 
-## ⚡ Pre-Pruning
+## Pre-Pruning
 Pre-pruning involves restricting tree growth **while training** to avoid overfitting.  
 Parameters used:
 - `max_depth` → maximum depth of the tree  
@@ -32,7 +32,7 @@ This helps in building a smaller, simpler tree that generalizes better.
 
 
 
-## 📊 Post-Pruning
+## Post-Pruning
 Post-pruning (also known as **cost-complexity pruning**) is applied **after training** the full tree.  
 
 
